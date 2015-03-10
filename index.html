@@ -1,0 +1,25 @@
+<script>
+var o = {
+	results : 0,
+	add : function() {
+		this.results += this.sumArguments.apply({}, Array.prototype.slice.call(arguments));
+			return this;
+		},
+
+	sub : function() {
+		this.results -= this.sumArguments.apply({}, Array.prototype.slice.call(arguments));
+			return this;
+		},
+
+	result : function() {
+		return this.results;
+		},
+	sumArguments : function() {
+		var s=0;
+		for(var i=0; i<arguments.length;i++) {
+			s+= arguments[i]
+		};
+			return s;
+		}
+}
+</script>
